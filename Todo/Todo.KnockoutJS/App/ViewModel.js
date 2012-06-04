@@ -26,4 +26,17 @@
             return !t.completed();
         }).length;
     });
+
+    self.editItem = function (item) {
+        item.editing(true);
+    };
+
+    // stop editing an item.  Remove the item, if it is now empty
+    self.stopEditing = function (item) {
+        item.editing(false);
+        if (!item.title().trim()) {
+            self.remove(item);
+        }
+    };
+
 }

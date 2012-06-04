@@ -19,12 +19,13 @@
         <section id="main">
             <button data-bind='click: add, disable: canAdd'>Add</button>
             <ul id="todo-list" data-bind="foreach: todos">
-                <li data-bind="css: { completed: completed}">
-                    <div class="view">
+                <li data-bind="css: { completed: completed, editing: editing}">
+                    <div class="view" data-bind="event: { dblclick: $root.editItem }">
                         <input class="toggle" type="checkbox" data-bind="checked: completed"/>
                         <label data-bind="text: title"></label>
                         <button class="destroy" data-bind="click: $root.remove"></button>
                     </div>
+                    <input class="edit" data-bind="value: title, valueUpdate: 'afterkeydown', enterKey: $root.stopEditing, event: { blur: $root.stopEditing }" >
                 </li>
             </ul>
             <span id="todo-count">
