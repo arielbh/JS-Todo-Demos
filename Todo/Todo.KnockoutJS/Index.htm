@@ -17,7 +17,12 @@
         </section>
         <section id="main">
             <ul id="todo-list" data-bind="foreach: todos">
-                <li data-bind="text: title"></li>
+                <li>
+                    <div class="view">
+                        <input class="toggle" type="checkbox" data-bind="checked: completed"/>
+                        <label data-bind="text: title"></label>
+                    </div>
+                </li>
             </ul>
             
         </section>
