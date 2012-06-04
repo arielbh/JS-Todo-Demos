@@ -12,13 +12,15 @@
         <img src="Assets/ko-logo.png">
         <h1>Todo - Knockout.JS</h1>
         
-        <p data-bind="text: title"></p>
-        <p data-bind="text: completed"></p>
+        <ul data-bind="foreach: todos">
+            <li data-bind="text: title"></li>
+        </ul>
         
 
         <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
         <script src="Scripts/knockout-2.1.0.js" type="text/javascript"></script>
         <script src="App/Todo.js" type="text/javascript"></script>
+        <script src="App/ViewModel.js" type="text/javascript"></script>
         <script src="App/App.js" type="text/javascript"></script>
     </body>
 </html>
