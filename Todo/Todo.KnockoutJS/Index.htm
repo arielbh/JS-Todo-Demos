@@ -23,6 +23,7 @@
                     <div class="view">
                         <input class="toggle" type="checkbox" data-bind="checked: completed"/>
                         <label data-bind="text: title"></label>
+                        <button class="destroy" data-bind="click: $root.remove"></button>
                     </div>
                 </li>
             </ul>

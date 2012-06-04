@@ -12,6 +12,11 @@
         }
     };
 
+    self.remove = function (todo) {
+        self.todos.remove(todo);
+
+    };
+
     self.canAdd = ko.computed(function () {
         return !self.current();
     });
