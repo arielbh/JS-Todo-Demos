@@ -12,7 +12,13 @@
         }
     };
 
-    self.canAdd = ko.computed(function() {
+    self.canAdd = ko.computed(function () {
         return !self.current();
+    });
+
+    self.remaining = ko.computed(function () {
+        return ko.utils.arrayFilter(self.todos(), function (t) {
+            return !t.completed();
+        }).length;
     });
 }
