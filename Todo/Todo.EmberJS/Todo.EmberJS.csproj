@@ -51,6 +51,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Todo.js" />
     <Content Include="App\App.js" />
     <Content Include="Scripts\ember-0.9.8.1.js" />
     <Content Include="Scripts\ember-0.9.8.1.min.js" />

@@ -10,10 +10,24 @@
 	<![endif]-->
 </head>
     <body>
+        <div id="todoapp">
+	        <div class="title">
+		        <h1>Todos</h1>
+	        </div>
+        <script type="text/x-handlebars">
+             {{#view id="todos"}}
+            	{{#collection id="todo-list" contentBinding="App.todosController" tagName="ul" itemClassBinding="content.completed"}}
+		            {{view Ember.Checkbox titleBinding="content.title" valueBinding="content.completed"}}
+	            {{/collection}}
+             {{/view}}
+        </script> 
+        </div>
  
 
-        <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+        <script src="Scripts/jquery-1.7.2.js" type="text/javascript">
+        </script>
         <script src="Scripts/ember-0.9.8.1.js" type="text/javascript"></script>
+        <script src="App/Todo.js" type="text/javascript"></script>
         <script src="App/App.js" type="text/javascript"></script>
     </body>
 </html>
