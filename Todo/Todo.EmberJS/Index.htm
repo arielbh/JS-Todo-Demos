@@ -11,16 +11,23 @@
 </head>
     <body>
         <div id="todoapp">
-	        <div class="title">
-		        <h1>Todos</h1>
-	        </div>
-        <script type="text/x-handlebars">
+            <div class="title">
+                <h1>Todos</h1>
+            </div>
+            <div class="content">
+                <script type="text/x-handlebars">
+                {{#view id="create-todo"}}
+	                {{view App.CreateTodoView id="new-todo" placeholder="What needs to be done?"}}
+                {{/view}}
+
              {{#view id="todos"}}
             	{{#collection id="todo-list" contentBinding="App.todosController" tagName="ul" itemClassBinding="content.completed"}}
 		            {{view Ember.Checkbox titleBinding="content.title" valueBinding="content.completed"}}
 	            {{/collection}}
              {{/view}}
-        </script> 
+        
+            </script> 
+            </div>
         </div>
  
 

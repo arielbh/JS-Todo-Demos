@@ -9,5 +9,16 @@ App.todosController = Ember.ArrayProxy.create({
     }
 });
 
+App.CreateTodoView = Ember.TextField.extend({
+    insertNewline: function () {
+        var value = this.get('value');
+
+        if (value) {
+            App.todosController.createTodo(value);
+            this.set('value', '');
+        }
+    }
+});
+
 App.todosController.createTodo("Task 1");
 App.todosController.createTodo("Task 2");

@@ -136,7 +136,7 @@ body {
     li {
       padding: 5px;
       
-      &.is-done {
+      &.completed {
         color: #B7B7B7;
         text-decoration: line-through;
       }
