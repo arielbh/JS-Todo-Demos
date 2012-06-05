@@ -18,7 +18,12 @@ function TodoController($scope) {
                 $scope.todos.splice(i, 1);
             }
         }
+    };
 
+    $scope.remainingTodos = function () {
+        return $scope.todos.filter(function (val) {
+            return !val.completed;
+        }).length;
     };
     
     
