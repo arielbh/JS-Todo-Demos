@@ -33,17 +33,17 @@
 
     createOnEnter: function (e) {
         if (e.keyCode != 13) return;
-        
+
         this.addItem(new Todo({ title: this.input.val() }));
         this.input.val('');
     },
 
 
     appendItem: function (item) {
-        $('ul', this.el).append("<li>" + item.get('title') + "</li>");
+        var todoView = new TodoView({
+                model: item
+            });
+        
+        $('ul', this.el).append(todoView.render().el);
     }
-
-
-
-
 });
