@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.KnockoutJS", "Todo.Kno
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.BackboneJS", "Todo.BackboneJS\Todo.BackboneJS.csproj", "{154AE6C3-25A9-41E7-89C5-0FBD276BC351}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.AngularJS", "Todo.AngularJS\Todo.AngularJS.csproj", "{5049124D-A0B1-469C-9E19-0E471B62D353}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{154AE6C3-25A9-41E7-89C5-0FBD276BC351}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{154AE6C3-25A9-41E7-89C5-0FBD276BC351}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{154AE6C3-25A9-41E7-89C5-0FBD276BC351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5049124D-A0B1-469C-9E19-0E471B62D353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5049124D-A0B1-469C-9E19-0E471B62D353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5049124D-A0B1-469C-9E19-0E471B62D353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5049124D-A0B1-469C-9E19-0E471B62D353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
