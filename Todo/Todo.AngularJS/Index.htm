@@ -16,10 +16,11 @@
             </header>
             <section id="main">
                 <ul id="todo-list">
-                    <li ng-repeat="todo in todos">
+                    <li ng-repeat="todo in todos" ng-class="{done: todo.completed}">
                         <div class="view">
                             <input type="checkbox" class="toggle" ng-model="todo.completed">
                             <label ng-bind="todo.title">Loading...</label>
+                            <a class="destroy" ng-click="removeTodo(todo)"></a>
                         </div>
                     </li>
                 </ul>
