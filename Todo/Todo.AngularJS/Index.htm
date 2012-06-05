@@ -5,18 +5,25 @@
     <link href="Assets/app.css" rel="stylesheet" type="text/css" />
     <link href="Assets/base.css" rel="stylesheet" type="text/css" />
 </head>
-    <body>
-        <div ng-controller="TodoController" id="todoapp">
+    <body  ng-controller="TodoController">
+        <div id="todoapp">
             <header>
                 <h1>Todos</h1>
-                
-
             </header>
-    
+            <section id="main">
+                <ul id="todo-list">
+                    <li ng-repeat="todo in todos">
+                        <div class="view">
+                            <label ng-bind="todo.title">Loading...</label>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
         </div>
-         
 
         <script src="Scripts/angular-1.0.0rc10.js" type="text/javascript"></script>
+        <script src="App/Todo.js" type="text/javascript"></script>
         <script src="App/TodoController.js" type="text/javascript"></script>
     </body>
 </html>
