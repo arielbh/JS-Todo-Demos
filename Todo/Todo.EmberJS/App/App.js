@@ -6,7 +6,10 @@ App.todosController = Ember.ArrayProxy.create({
     createTodo: function (title) {
         var todo = Todo.create({ title: title });
         this.pushObject(todo);
-    }
+    },
+    remaining: function () {
+        return this.filterProperty('completed', false).get('length');
+    } .property('@each.completed')
 });
 
 App.CreateTodoView = Ember.TextField.extend({
@@ -18,6 +21,14 @@ App.CreateTodoView = Ember.TextField.extend({
             this.set('value', '');
         }
     }
+});
+
+App.StatsView = Ember.View.extend({
+    remainingBinding: 'App.todosController.remaining',
+    remainingString: function () {
+        var remaining = this.get('remaining');
+        return remaining + (remaining === 1 ? " item" : " items");
+    } .property('remaining')
 });
 
 App.todosController.createTodo("Task 1");

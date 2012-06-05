@@ -20,13 +20,17 @@
 	                {{view App.CreateTodoView id="new-todo" placeholder="What needs to be done?"}}
                 {{/view}}
 
-             {{#view id="todos"}}
-            	{{#collection id="todo-list" contentBinding="App.todosController" tagName="ul" itemClassBinding="content.completed"}}
-		            {{view Ember.Checkbox titleBinding="content.title" valueBinding="content.completed"}}
-	            {{/collection}}
-             {{/view}}
+                {{#view id="todos"}}
+            	    {{#collection id="todo-list" contentBinding="App.todosController" tagName="ul" itemClassBinding="content.completed"}}
+		                {{view Ember.Checkbox titleBinding="content.title" valueBinding="content.completed"}}
+	                {{/collection}}
+                {{/view}}
+                
+                {{#view App.StatsView id="todo-stats" content=this}}
+		           {{remainingString}} left
+	            {{/view}}
         
-            </script> 
+            </script>
             </div>
         </div>
  
