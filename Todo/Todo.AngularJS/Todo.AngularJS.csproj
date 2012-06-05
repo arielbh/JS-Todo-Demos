@@ -51,6 +51,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Todo.js" />
     <Content Include="App\TodoController.js" />
     <Content Include="Assets\app.css" />
     <Content Include="Assets\base.css" />
