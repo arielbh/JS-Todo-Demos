@@ -18,7 +18,7 @@
     render: function () {
 
 
-        $(this.el).append("<ul></ul>");
+        $(this.el).append("<ul id='todo-list'></ul>");
         if (this.source) {
             _(this.source.models).each(function (item) { // in case collection is not empty
                 self.appendItem(item);
